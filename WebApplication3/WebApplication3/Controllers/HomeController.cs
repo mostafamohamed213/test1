@@ -18,7 +18,7 @@ namespace WebApplication3.Controllers
             _logger = logger;
         }
 
-        public IActionResult howt()
+        public IActionResult howtx()
         {
             return View();
         }
