@@ -1,0 +1,62 @@
+﻿@model IEnumerable<WebApplication3.Models.Sections>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Sections</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table table-bordered table-striped" border="1">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.SectionNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Courses)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Professors)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ClassRooms)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Days)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Time)
+            </th>
+       
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.SectionNumber)
+            </td>
+            <td>
+                  @Html.DisplayFor(modelItem => item.Courses.CourseCode)-
+                @Html.DisplayFor(modelItem => item.Courses.CourseName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Professors.ProfessorName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ClassRooms.ClassRoom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Days.Day)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Time.time)
+            </td>
+         
+        </tr>
+}
+    </tbody>
+</table>
