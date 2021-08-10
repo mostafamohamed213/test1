@@ -18,15 +18,13 @@ namespace WebApplication3.Controllers
             _logger = logger;
         }
 
-        public IActionResult howtx()
+        public IActionResult howtxasd()
         {
+            var x = 1;
             return View();
         }
         
-        public IActionResult Index()
-        {
-            return View();
-        }
+  
 
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
